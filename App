@@ -1,0 +1,37 @@
+public class App {
+
+    public static void main(String[] args) {
+
+        //для первого задания
+        String[] arr = {"20", "30", "40", "50"};
+        Integer[] arr1 = {1, 2, 3, 4, 5};
+        System.out.println(Arrays.toString(arr));
+        swapElem(arr, 0, 2);
+        System.out.println(Arrays.toString(arr));
+
+        System.out.println(Arrays.toString(arr1));
+        swapElem(arr1, 0, 2);
+        System.out.println(Arrays.toString(arr1));
+
+        //для второго задания
+        List<String> list = transform(arr);
+        System.out.println("Task 2\n" + list.getClass() + " : " + list);
+        
+        // не хватило времени
+
+
+
+
+    }
+
+
+    private static <T> void swapElem(T[] arr, int index1, int index2) {
+        T temp = arr[index1];
+        arr[index1] = arr[index2];
+        arr[index2] = temp;
+    }
+
+    private static <T> List<T> transform(T[] arr) {
+        return Arrays.asList(arr);
+    }
+}
